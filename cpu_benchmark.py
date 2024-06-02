@@ -26,6 +26,7 @@ directory = 'images'
 file_list = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
 total_files = len(file_list)
 
+print(f"Coral AI Benchmark on COCO with MobileNet2 on CPU")
 print(f"Starting benchmark for {total_files} files ...")
 
 # Initialize total time
