@@ -7,7 +7,7 @@ from pycoral.utils.edgetpu import make_interpreter
 from pycoral.utils.edgetpu import run_inference
 
 
-interpreter = make_interpreter(model_path_or_content="./ssd_mobilenet_v2_cpu.tflite")
+interpreter = make_interpreter(model_path_or_content="./ssd_mobilenet_v2_tpu.tflite")
 interpreter.allocate_tensors()
 
 labels = read_label_file("coco_labels.txt")
