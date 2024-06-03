@@ -62,6 +62,6 @@ print("\nAll files processed.")
 total_time_ms = total_time * 1000
 average_time_ms = (total_time / total_files) * 1000
 
-print(f"Total execution time: {total_time_ms:.2f} milliseconds")
+print(f"Total execution time: {total_time_ms:.2f} milliseconds - {((total_time_ms/1000)/60):.2f} seconds")
 print(f"Average time per document: {average_time_ms:.2f} milliseconds")
 
