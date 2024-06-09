@@ -1,7 +1,6 @@
 import numpy as np
 import tensorflow as tf
 import cv2
-import matplotlib.pyplot as plt
 
 from pycoral.adapters.common import input_size
 from pycoral.adapters.detect import get_objects
