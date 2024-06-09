@@ -6,7 +6,7 @@ This is just a simple repo to test how Coral AI Edge TPU performs on different c
 |**Device** | **RAM** |  **Images**  | **CPU**   | **TPU** |  **Time / Image CPU**| **Time / Image TPU**|
 |---|---|---|---|---|---|---|
 | MacBook Air M2 | 16 GB | 5k | 53.35 s | 74.95 s | 10.67 ms | 14.90 ms |
-| Raspberry Pi $ B | 4 GB | 5k  |  | 143.52 s |   | 28.75 ms |
+| Raspberry Pi $ B | 4 GB | 5k  | 596.79 s | 143.52 s | 119.36 ms | 28.75 ms |
 |   |   |   |   |   |   |   |
 
 ## How to run this benchmark ?
