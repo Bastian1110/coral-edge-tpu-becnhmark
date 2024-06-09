@@ -5,7 +5,7 @@ This is just a simple repo to test how Coral AI Edge TPU performs on different c
 
 |**Device** | **RAM** |  **Images**  | **CPU**   | **TPU** |  **Time / Image CPU**| **Time / Image TPU**|
 |---|---|---|---|---|---|---|
-| MacBook Air M2 | 16 GB | 40k |450000 ms | 570000 ms | 11 ms | 13 ms |
+| MacBook Air M2 | 16 GB | 5k | 53.35 s | 74.95 s | 10.67 ms | 14.90 ms |
 |   |   |   |   |   |   |   |
 |   |   |   |   |   |   |   |
 
