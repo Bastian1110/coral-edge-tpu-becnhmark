@@ -22,16 +22,17 @@ inference_size = input_size(interpreter)
 import os
 from time import time
 
+N_FILES = 5000
+# COCO Test has 40670 files
+
 directory = 'images'
 file_list = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
 total_files = len(file_list)
 
 print(f"Coral AI Benchmark on COCO with MobileNet2 on CPU")
-print(f"Starting benchmark for {total_files} files ...")
+print(f"Starting benchmark for {N_FILES} files ...")
 
-# Initialize total time
 total_time = 0
-
 for i, filename in enumerate(file_list):
     file_path = os.path.join(directory, filename)
     
@@ -53,15 +54,19 @@ for i, filename in enumerate(file_list):
     document_time = end_time - start_time
     total_time += document_time
     
-    percentage = ((i + 1) / total_files) * 100
+    percentage = ((i + 1) / N_FILES) * 100
     print(f"\rProcessing file: {file_path} ({percentage:.2f}%)", end='')
+    if (i + 1) == N_FILES:
+        break
 
 print("\nAll files processed.")
 
 # Convert total time to milliseconds
 total_time_ms = total_time * 1000
-average_time_ms = (total_time / total_files) * 1000
+average_time_ms = (total_time / N_FILES) * 1000
 
-print(f"Total execution time: {total_time_ms:.2f} milliseconds - {((total_time_ms/1000)/60):.2f} seconds")
+print(f"Total execution time: {total_time_ms:.2f} milliseconds - {(total_time):.2f} seconds")
 print(f"Average time per document: {average_time_ms:.2f} milliseconds")
+
+
 
